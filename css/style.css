@@ -1,97 +1,163 @@
-*{margin: 0; padding: 0; box-sizing: border-box; text-decoration: none;}
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none;}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body{
+body {
     background-color: #140216;
     font-family: "Roboto", sans-serif;
 }
 
 /* -------------- nav --------------- */
 
-nav{
-    display: flex;
-    justify-content: space-around;
-    white-space: nowrap; 
-    border-bottom: solid 4px #7037CD;
+/* Define o estilo para o elemento nav */
+nav {
+    display: flex; /* Usa flexbox para layout */
+    justify-content: space-between; /* Alinha os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    border-bottom: solid 4px #7037CD; /* Adiciona uma borda na parte inferior */
+    flex-wrap: wrap; /* Permite que os itens se ajustem à largura da tela */
 }
 
-nav h1{
-    color: #fff;
-    padding: 30px;
+/* Define o estilo para o título h1 dentro do nav */
+nav h1 {
+    color: #fff; /* Define a cor do texto */
+    flex: 1; /* Para o h1 ocupar o espaço restante e ficar centralizado */
+    text-align: center; /* Centraliza o texto */
+    margin-left: 100px;
 }
 
-.social-media img{
-    filter: invert();
-    margin-top: 22px;
-    padding: 5px;
-    cursor: pointer;
+/* Define o estilo para o contêiner das redes sociais */
+.social-media {
+    margin-right: 20px; /* Reduz o espaçamento entre a borda e as imagens */
 }
 
+/* Define o estilo para as imagens das redes sociais */
+.media {
+    filter: invert(); /* Inverte as cores das imagens */
+    margin: 5px; /* Adiciona espaçamento entre os ícones */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    width: 32px; /* Define a largura dos ícones */
+    height: auto; /* Mantém a proporção da altura */
+}
+
+/* Define o estilo para o botão do dropdown */
 .dropbtn {
-    filter: invert();
-    padding: 12px;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
+    filter: invert(); /* Inverte as cores do botão */
+    padding: 12px; /* Adiciona preenchimento interno */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    margin: 5px 10px; /* Adiciona espaçamento entre o botão e as bordas */
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
+/* Define o estilo para o conteúdo do dropdown */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    display: none; /* Inicialmente oculta o conteúdo do dropdown */
+    position: absolute; /* Posiciona absolutamente em relação ao elemento pai */
+    background-color: #f9f9f9; /* Define a cor de fundo */
+    min-width: 160px; /* Define a largura mínima */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    z-index: 1; /* Define a ordem de empilhamento */
+    margin: 5px 10px; /* Adiciona espaçamento entre o menu e as bordas */
 }
 
+/* Define o estilo para os links do dropdown */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    color: black; /* Define a cor do texto */
+    padding: 12px 16px; /* Adiciona preenchimento interno */
+    text-decoration: none; /* Remove a decoração de texto */
+    display: block; /* Faz os links ocuparem toda a largura disponível */
 }
 
+/* Define o estilo para os links do dropdown quando hover */
 .dropdown-content a:hover {
-    background-color: #68B2F8;
+    background-color: #68B2F8; /* Altera a cor de fundo quando hover */
 }
 
+/* Define o estilo para mostrar o conteúdo do dropdown quando hover no botão */
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Mostra o conteúdo do dropdown quando hover no botão */
 }
 
+/* Define o estilo para alterar a cor de fundo do botão quando hover */
 .dropdown:hover .dropbtn {
-    background-color: #555;
+    background-color: #555; /* Altera a cor de fundo do botão quando hover */
 }
+
 
 /* --------------- main --------------- */
+
 main {
     color: #fff;
 }
 
-.ola{
-    width: 241px;
-    height: 28px;
-    margin: 300px 198px;
+.ola {
+    max-width: 100%; 
+    height: auto; 
+    margin: 200px 200px; 
+    text-align: left;
 }
 
-.ola button{
-    width: 257px;
-    height: 50px;
+.ola-btn {
+    width: 100%; 
+    max-width: 300px;
+    height: 40px;
+    margin-top: 30px;
     background-color: #7037CD;
-    border-radius: 20px;
+    border-radius: 20px 0 0 0;
+} 
+
+.ola-btn a{
     font-size: 15px;
     color: #fff;
+    font-style: italic;
 }
 
-.sobre-mim{
-    text-align: center;
-    width: 402px;
-    height: 169px;
-    margin: 400px auto;
+.ola p{
+    font-size: 20px;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.name{
+    color: #784CC0
+}
+
+.sobre-mim {
+    max-width: 100%; 
+    height: auto; 
+    width: 600px;
+    margin: 100px auto; 
+    text-align: center; 
+    line-height: 1.5;
+} 
+
+.linha{
+    border-bottom: solid 4px #7037CD; /* Adiciona uma borda na parte inferior */
+    margin-top: -50px;
+}
+
+
+/* -------------------- habilidades ------------------- */
+
+@media screen and (max-width: 768px) {
+    .social-media img {
+        display: none; /* Oculta as imagens das redes sociais */
+    }
+
+    .ola {
+        margin: 100px 20px; /* Reduz a margem nas telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .ola-btn {
+        width: 100%; /* Ocupa a largura total */
+        max-width: none; /* Remove a largura máxima */
+    }
+
+    .sobre-mim {
+        width: 100%; /* Ocupa a largura total */
+        max-width: 100%; /* Define a largura máxima como 100% */
+        margin: 50px auto; /* Centraliza verticalmente */
+    }
 }
