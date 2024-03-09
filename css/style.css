@@ -130,6 +130,7 @@ main {
     margin: 100px auto; 
     text-align: center; 
     line-height: 1.5;
+    font-size: 18px;
 } 
 
 .linha{
@@ -137,10 +138,61 @@ main {
     margin-top: -50px;
 }
 
-
 /* -------------------- habilidades ------------------- */
 
+.habilidades h1{
+    max-width: 100%; 
+    height: auto; 
+    width: 600px;
+    margin: 100px auto; 
+    text-align: center; 
+    line-height: 1.5;
+}
+
+.coluna-skill {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    margin-top: 100px;
+}
+
+.skill {
+    width: 149px; /* Largura dos quadrados */
+    height: 149px; /* Altura dos quadrados */
+    background-color: #651F71; /* Cor de fundo dos quadrados */
+    box-shadow: 4px 6px 23px #506EE5; /* Adiciona sombra */;
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    line-height: 120px; /* Centraliza verticalmente o texto */
+    border-radius: 20px 0px 0px 0px;
+    font-size: 20px;
+
+}
+
+/* -------------------- formações ------------------- */
+
+.formacoes h1{
+    max-width: 100%; 
+    height: auto; 
+    width: 600px;
+    margin: 100px auto; 
+    text-align: center; 
+    line-height: 1.5;
+}
+
+.cursos{
+    position: absolute;
+    width: 904px;
+    height: 464px;
+    margin-left: 180px;
+    background: #68B2F8;
+}
+
 @media screen and (max-width: 768px) {
+    nav h1{
+        font-size: 20px;
+    }
+
     .social-media img {
         display: none; /* Oculta as imagens das redes sociais */
     }
@@ -159,5 +211,17 @@ main {
         width: 100%; /* Ocupa a largura total */
         max-width: 100%; /* Define a largura máxima como 100% */
         margin: 50px auto; /* Centraliza verticalmente */
+        font-size: 12px;
+    }
+
+    .coluna-skill {
+        margin-top: 50px; /* Reduz o espaçamento superior em telas menores */
+    }
+
+    .skill {
+        width: 70px; /* Reduz a largura dos quadrados em telas menores */
+        height: 70px; /* Reduz a altura dos quadrados em telas menores */
+        line-height: 50px; /* Ajusta o alinhamento vertical do texto */
+        font-size: 12px; /* Reduz o tamanho da fonte em telas menores */
     }
 }
