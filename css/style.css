@@ -5,9 +5,10 @@
 body {
     background-color: #140216;
     font-family: "Roboto", sans-serif;
+    color: #fff;
 }
 
-/* -------------- nav --------------- */
+/* -------------------- nav -------------------- */
 
 /* Define o estilo para o elemento nav */
 nav {
@@ -84,12 +85,7 @@ nav h1 {
     background-color: #555; /* Altera a cor de fundo do botão quando hover */
 }
 
-
-/* --------------- main --------------- */
-
-main {
-    color: #fff;
-}
+/* -------------------- main -------------------- */
 
 .ola {
     max-width: 100%; 
@@ -138,7 +134,7 @@ main {
     margin-top: -50px;
 }
 
-/* -------------------- habilidades ------------------- */
+/* -------------------- habilidades-------------------- */
 
 .habilidades h1{
     max-width: 100%; 
@@ -169,7 +165,7 @@ main {
 
 }
 
-/* -------------------- formações ------------------- */
+/* -------------------- formações -------------------- */
 
 .formacoes h1{
     max-width: 100%; 
@@ -180,13 +176,132 @@ main {
     line-height: 1.5;
 }
 
-.cursos{
-    position: absolute;
+.carousel-container {
+    position: relative;
+    max-width: 904px; /* Ajuste conforme necessário */
+    height: 464px; /* Ajuste conforme necessário */
+    margin: 0 auto; /* Centralize horizontalmente */
+    overflow: hidden; /* Oculte o conteúdo além do contêiner */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease; /* Adicione uma transição suave ao movimento do carrossel */
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Os itens do carrossel não devem crescer */
+    background: #68B2F8; /* Cor de fundo conforme fornecido */
     width: 904px;
     height: 464px;
-    margin-left: 180px;
-    background: #68B2F8;
+    left: calc(50% - 904px/2);
 }
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* -------------------- projetos -------------------- */
+
+.projetos h1{
+    max-width: 100%; 
+    height: auto; 
+    width: 600px;
+    margin: 100px auto; 
+    text-align: center; 
+    line-height: 1.5;
+}
+
+.projetos p{
+    max-width: 100%; 
+    height: auto; 
+    margin: 100px 100px; 
+    text-align: left;
+}
+
+.destaques{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    margin-top: 100px;
+}
+
+.proj-princ{
+    width: 300px; /* Largura dos quadrados */
+    height: 200px; /* Altura dos quadrados */
+    background-color: #68B2F8; /* Cor de fundo dos quadrados */
+}
+
+.todos{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    margin-top: 100px;
+}
+
+.proj{
+    width: 300px; /* Largura dos quadrados */
+    height: 200px; /* Altura dos quadrados */
+    background-color: #68B2F8; /* Cor de fundo dos quadrados */
+}
+
+/* -------------------- contatos -------------------- */
+
+.contatos-h1{
+    max-width: 100%; 
+    height: auto; 
+    width: 600px;
+    margin: 100px auto; 
+    text-align: center; 
+    line-height: 1.5;
+}
+
+.contatos{
+    display: flex; /* Usa flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 100px; /* Ajusta o espaçamento superior conforme necessário */
+}
+
+/* Define o estilo para o contêiner das redes sociais */
+.contatos-social-media {
+    display: inline-block; /* Exibe os contêineres em linha */
+    text-align: center; /* Centraliza o conteúdo */
+    margin-right: 20px; /* Adiciona espaçamento entre os contêineres */
+}
+
+/* Define o estilo para as imagens das redes sociais */
+.contatos-media {
+    filter: invert(); /* Inverte as cores das imagens */
+    width: 32px; /* Define a largura dos ícones */
+    height: auto; /* Mantém a proporção da altura */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    margin-bottom: 10px; /* Adiciona espaçamento entre a imagem e o texto */
+}
+
+/* Define o estilo para o texto das redes sociais */
+.social-media-text {
+    color: #fff; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* -------------------- responsividade -------------------- */
 
 @media screen and (max-width: 768px) {
     nav h1{
@@ -223,5 +338,49 @@ main {
         height: 70px; /* Reduz a altura dos quadrados em telas menores */
         line-height: 50px; /* Ajusta o alinhamento vertical do texto */
         font-size: 12px; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .carousel-container {
+        max-width: 100%; /* Ajuste a largura máxima para ocupar toda a largura do dispositivo */
+        max-height: 100%; /* Ajuste a altura automaticamente conforme necessário */
+        display: flex; /* Exiba o carrossel como um flexbox */
+        justify-content: center; /* Centralize o carrossel horizontalmente */
+    }
+
+    .carousel-item {
+        flex: 0 0 auto; /* Os itens do carrossel não devem crescer */
+        width: 100%; /* Ajuste a largura dos itens para ocupar toda a largura do contêiner */
+        max-width: 100%; /* Garanta que a largura máxima seja de 100% */
+        height: auto; /* Ajuste a altura automaticamente conforme necessário */
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 14px; /* Reduza o tamanho da fonte dos botões de navegação */
+        padding: 5px; /* Reduza o espaçamento interno dos botões de navegação */
+    }
+
+    .projetos p {
+        margin: 20px; /* Ajuste a margem para ocupar menos espaço */
+    }
+
+    .destaques,
+    .todos {
+        flex-direction: column; /* Altera a direção do flexbox para coluna */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    .proj-princ,
+    .proj {
+        margin-bottom: 20px; /* Ajuste o espaçamento entre os quadrados */
+    }
+
+    .contatos {
+        flex-direction: column; /* Altera a direção do flexbox para coluna */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    .contatos-social-media {
+        margin: 10px 0; /* Ajusta a margem entre os contêineres */
     }
 }
